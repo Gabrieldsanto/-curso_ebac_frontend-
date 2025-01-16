@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio de formulario</title>
+</head>
+<body>
+    <h1>Meu Formulário</h1>
+    <form action="">
+        <label for="user">Usúario:</label>
+        <input id="user" type="text" placeholder="Digite seu usúario...">
+        <br>
+        <label for="email">E-mail:</label>
+        <input id="email" type="email" placeholder="Digite seu e-mail...">
+        <br>
+        <label for="senha">Senha:</label>
+        <input id="senha" type="password" placeholder="Digite sua senha...">
+        <br>
+        <br>
+        <button type="submit">Cadastrar</button>
+    </form>
+    
+</body>
+</html>
