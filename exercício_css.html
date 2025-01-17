@@ -1,1 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto blog da Ebac</title>
+    <style>
+        *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+/*MEU CABEÇALHO*/
+
+body > header{
+    display:flex;
+    width: 100%;
+    background-color: rgb(29, 29, 113);
+    color: white;
+    padding: 20px 50px;
+    justify-content: space-between;
+}
+
+
+header h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 2px 3px 3px black;
+    
+}
+
+ul a{
+    display: inline;
+    padding-left: 20px;
+    text-shadow: 2px 3px 3px black;
+
+}
+
+ul a:hover{
+    color: blueviolet;
+    text-decoration: underline;
+    cursor: pointer;
+    }
+
+
+    /*Meu conteudo*/
+
+    h2{
+        background-color: blue;
+        text-align: center;
+        padding: 10px 0px;
+        color: white;
+        text-shadow: 2px 3px 3px black;
+
+    }
+
+    #sessao1{
+        display: flex;
+        background-color: rgb(201, 194, 194);
+        width: 100%;
+        height: 600px;
+        padding: 50px;
+    }
+
+    .articles{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: 20px;
+        margin: 5px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.416);
+    }
+
+    .articles img{
+        height: 300px;
+        width: 90%;
+        
+        }
+
+        .articles header {
+            padding: 5px;
+        }
+
+        .articles p {
+            padding: 5px;
+        }
+
+        .articles a {
+            background-color: black;
+            width: 100px;
+            border-radius: 15px;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .articles a:hover{
+            color: blueviolet;
+        }
+
+        #sessao2{
+            display: flex;
+            background-color: rgb(17, 28, 34);
+            width: 100%;
+            height: 600px;
+            padding: 50px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Projeto CSS</h1>
+        <nav>
+            <ul>
+                <a>Tecnologia</a>
+                <a>Entretenimento </a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h2>Tecnologia</h2>
+        </div>
+        <section id="sessao1">
+            <article class="articles">
+                <img src="https://www.itsinternational.com/sites/its/files/2023-02/dreamstime_s_102189155.jpg" alt="">
+                <header>
+                    <time">16/012025 ás 22:18</time>
+                </header>
+                <h3>Os 15 melhores drones de 2025</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ratione at aliquam fugiat quibusdam quis iusto perspiciatis eos aspernatur autem incidunt amet eius itaque minus expedita veritatis accusamus, possimus corporis!</p>
+                <a href="">Leia mais...</a>
+            </article>
+            <article class="articles">
+                <img src="https://scansource.com.br/wp-content/uploads/2024/08/1-As-Ultimas-Tendencias-em-IA-scaled.jpg" alt="">
+                <header>
+                    <time">16/012025 ás 22:18</time>
+                </header>
+                <h3>Inteligencia Atificial em 2025</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ratione at aliquam fugiat quibusdam quis iusto perspiciatis eos aspernatur autem incidunt amet eius itaque minus expedita veritatis accusamus, possimus corporis!</p>
+                <a href="">Leia mais...</a>
+            </article>
+
+    </section>
+
+        <!--Seção 2-->
+    <section>
+        <div>
+            <h2>Entretenimento</h2>
+        </div>
+        <section id="sessao2">
+            <article class="articles">
+                <img src="https://static.poder360.com.br/2021/04/19338701712_2712459694_k.jpg" alt="">
+                <header>
+                    <time">16/012025 ás 22:18</time>
+                </header>
+                <h3>Novidades da Netflix</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ratione at aliquam fugiat quibusdam quis iusto perspiciatis eos aspernatur autem incidunt amet eius itaque minus expedita veritatis accusamus, possimus corporis!</p>
+                <a href="">Leia mais...</a>
+            </article>
+            <article class="articles">
+                <img src="https://www.pragmatismopolitico.com.br/wp-content/uploads/2023/03/mercado-entretenimento-brasil-tecnologia1.png" alt="">
+                <header>
+                    <time">16/012025 ás 22:18</time>
+                </header>
+                <h3>O que meu filho esta jogando?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ratione at aliquam fugiat quibusdam quis iusto perspiciatis eos aspernatur autem incidunt amet eius itaque minus expedita veritatis accusamus, possimus corporis!</p>
+                <a href="">Leia mais...</a>
+            </article>
+
+    </section>
+    </main>
+    
+</body>
+</html>
