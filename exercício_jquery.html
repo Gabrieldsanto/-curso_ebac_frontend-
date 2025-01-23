@@ -1,1 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: gainsboro;
+        }
+        h1{
+            font-weight: bolder;
+            font-size: 40px;
+            text-decoration: underline;
+        }
+        
+        .container{
+            text-align: center;
+            padding: 60px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            
+        }
+        li {
+            background-color: aliceblue;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+            cursor: pointer;
+            list-style: inside;
+            
+        }
+        li.completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        form label, input, button{
+            padding: 10px 4px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        form button{
+            background-color: chartreuse;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+            border: 1px solid rgba(0, 0, 0, 0.464);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+
+    <form id="formTarefa">
+        <label for="nomeTarefa">Nome da Tarefa:</label>
+        <input type="text" id="nomeTarefa" placeholder="Digite a Tarefa..." required>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <ul id="listaTarefas">
+    </ul>
+    </div>
+    
+
+    <script>
+        $(document).ready(function() {
+            $('#formTarefa').on('submit', function(event) {
+                event.preventDefault(); 
+            
+                const nomeTarefa = $('#nomeTarefa').val();
+                const novaTarefa = $('<li></li>').text(nomeTarefa);
+
+                novaTarefa.on('click', function() {
+                    $(this).toggleClass('completed');
+                });
+
+                $('#listaTarefas').append(novaTarefa);
+
+                $('#formTarefa')[0].reset();
+            });
+        });
+    </script>
+</body>
+</html>
 
