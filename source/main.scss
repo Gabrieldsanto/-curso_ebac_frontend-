@@ -1,0 +1,118 @@
+@use 'config/variables' as var;
+@use 'config/reset';
+
+// Base
+body {
+  font-family: var.$font-family;
+  background-color: var.$bg-body;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+// Meu Cabeçalho
+header {
+  background-color: var.$bg-header;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  .logotipo{
+    width: 150px;
+    height: 100px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+  }
+}
+
+// Meu menu
+.menu {
+  display: flex;
+
+  li {
+    font-weight: bold;
+    margin-left: 24px;
+
+    a {
+      color: var.$color-white;
+      text-decoration: none;
+    }
+  }
+}
+
+// Seções de produtos
+section {
+  padding: 56px 0;
+}
+
+// Produtos
+.products {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 32.66%);
+  column-gap: 1%;
+  row-gap: 4%;
+  width: 100%;
+
+  .product-item {
+    img {
+      width: 100%;
+      border-radius: 16px;
+    }
+  }
+
+  .product-button {
+    display: block;
+    background-color: var.$green;
+    color: var.$color-white;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    margin-top: 8px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: var.$green-hover;
+    }
+  }
+}
+
+//Parte de Responsivo
+@media screen and (max-width: 1023px) {
+  .container {
+    max-width: 80%;
+  }
+
+  .logotipo{
+    width: 2px;
+    height: 1px;
+
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 48.5%);
+    column-gap: 3%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .products {
+    display: block;
+
+    .product-item {
+      margin-bottom: 32px;
+    }
+  }
+}
