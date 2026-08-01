@@ -1,0 +1,45 @@
+@corPrincipal: #182C61;
+@corSecundaria: #44bd32;
+@corTexto: #ffffff;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: @corPrincipal;
+    color: @corTexto;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 80px 0;
+    text-align: center;
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 30px;
+    }
+
+    button {
+        background-color: @corSecundaria;
+        color: @corTexto;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
